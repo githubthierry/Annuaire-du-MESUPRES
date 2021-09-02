@@ -1,0 +1,43 @@
+1. Créer un projet laravel
+    -> composer create-project laravel/laravel --prefer-dist nom_projet
+
+2. Démarrer un serveur
+    -> php artisan serve
+
+3. Créer un modèle , une migration et un controlleur en même temps
+    -> php artisan make:model -mc nom_table
+
+4. Faire une migratation
+    -> php artisan migrate
+
+5. Créer un request
+    -> php artisan make:request nom_tableRequest
+
+6. Créer un factory
+    -> php artisan make:factory nom_tableFactory --model=nom_table
+    Ex : php artisan make:factory postesFactory --model=postes
+
+7. Créer un dossier pour mettre l'image
+    -> php artisan Storage:link
+
+    /**********************************************************/
+    Permissions
+    1. View_items
+        -> voir la liste des éléments uniquements
+    2. manage_items (gérer les éléments)
+        -> créer / modifier / supprimer
+    3. manage_utilisateurs
+        -> créer / modifier / supprimer
+        -> changer le mot de passer de l'manage_utilisateurs
+
+    Roles
+    1. Super Admin
+        -> View_items
+        ->manage_items
+        ->manage_utilisateurs
+    2. manage_utilisateurs
+        -> View_items
+        -> manage_items
+    3. view
+        -> View_items
+
